@@ -1,5 +1,7 @@
 package hw3;
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class hw3 {
 	
@@ -20,6 +22,34 @@ public class hw3 {
 		return produss;
 	}
 	
+	public static ArrayList<Integer> createArrayList(int[] arr) {
+		ArrayList<Integer> list = new ArrayList<Integer>();
+		
+		for (int i=0; i < arr.length;i++) {
+			list.add(arr[i]);
+		}
+		return list;
+	}
+	
+	public static int[] createArray(int...nums) {
+		int[] arr = nums;
+		return arr;
+	}
+	
+	public static int[] reverseOrder(int[] arr) {
+		int[] reverse = arr;
+		
+		for (int i=0; i < reverse.length / 2;i++) {
+			int j = reverse[i];
+			reverse[i] = reverse[reverse.length-i-1];
+			reverse[reverse.length - i-1] = j;
+		}
+		return reverse;
+	}
+	
+	
+
+	
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter array size");
@@ -36,21 +66,24 @@ public class hw3 {
 			
 		}
 		
+		System.out.println("Array:" + Arrays.toString(arr));
+		
 		System.out.println("Options:");
 		System.out.println("S - Sum of Array");
 		System.out.println("P - Product of Array");
+		System.out.println("R - Reverse of Array");
 		System.out.println("X - Exit");
 		
 		String option = scan.next();
 		
-		while (!option.equals("X")) {
+		while (!option.equalsIgnoreCase("X")) {
 			
-			if (option.equals("S")) {
+			if (option.equalsIgnoreCase("S")) {
 				int sum = sumArray(arr);
 				System.out.println(sum);
 			}
 			
-			else if (option.equals("P")) {
+			else if (option.equalsIgnoreCase("P")) {
 				int product = multiplyArray(arr);
 				System.out.println(product);
 			}
