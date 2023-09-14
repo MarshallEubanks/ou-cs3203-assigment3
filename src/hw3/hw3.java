@@ -80,12 +80,17 @@ public class hw3 {
 			
 			if (option.equalsIgnoreCase("S")) {
 				int sum = sumArray(arr);
-				System.out.println(sum);
+				System.out.println("Sum: " + sum);
 			}
 			
 			else if (option.equalsIgnoreCase("P")) {
 				int product = multiplyArray(arr);
-				System.out.println(product);
+				System.out.println("Product: " + product);
+			}
+			
+			else if (option.equalsIgnoreCase("R")) {
+				int[] reverse = reverseOrder(arr);
+				System.out.println("Reverse: " + Arrays.toString(reverse));
 			}
 			
 			System.out.println("Enter next option");
