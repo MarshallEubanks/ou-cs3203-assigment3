@@ -88,10 +88,7 @@ public class hw3 {
 				System.out.println("Product: " + product);
 			}
 			
-			else if (option.equalsIgnoreCase("R")) {
-				int[] reverse = reverseOrder(arr);
-				System.out.println("Reverse: " + Arrays.toString(reverse));
-			}
+			
 			
 			System.out.println("Enter next option");
 			option = scan.next();
