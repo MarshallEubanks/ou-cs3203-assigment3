@@ -1,4 +1,5 @@
 package hw3;
+import java.util.Scanner;
 
 public class hw3 {
 	
@@ -10,9 +11,14 @@ public class hw3 {
 		return sum;
 	}
 	
-	public static void main(String[] args) {
-		int[] arr = {1, 2 ,3};
-		int sum = sumArray(arr);
-		System.out.print(sum);
+	public static int multiplyArray(int[] arr) {
+		int product = arr[0];
+		
+		for (int i =1; i < arr.length; i++) {
+			product = product * arr[i];
+		}
+		return product;
 	}
+	
+
 }
