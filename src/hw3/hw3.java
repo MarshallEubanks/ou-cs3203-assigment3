@@ -12,12 +12,12 @@ public class hw3 {
 	}
 	
 	public static int multiplyArray(int[] arr) {
-		int product = arr[0];
+		int produss = arr[0];
 		
 		for (int i =1; i < arr.length; i++) {
-			product = product * arr[i];
+			produss = produss * arr[i];
 		}
-		return product;
+		return produss;
 	}
 	
 
